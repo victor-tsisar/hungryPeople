@@ -3,6 +3,6 @@ layout "HungryPeople": training project
 Using normalize.css, slick-carousel, JS and jQuery, with SCSS and Gulp.
 Spent 7 hours on template the layout, 4 hours - on creating an adaptive version and connect plugins.
 
-Link: https://https://victor-tsisar.github.io/hungryPeople/dist/index.html
+Link: https://victor-tsisar.github.io/hungryPeople/dist/index.html
 
 There is no commercial interest!
