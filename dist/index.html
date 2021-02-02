@@ -30,7 +30,9 @@
             </nav>
 
             <a class="logo" href="#">
-                <picture><source srcset="images/logo.svg" type="image/webp"><img src="images/logo.svg" alt="logo"></picture>
+                <picture>
+                    <source srcset="images/logo.svg" type="image/webp"><img src="images/logo.svg" alt="logo">
+                </picture>
             </a>
 
             <nav class="menu-header menu-header--right">
@@ -63,8 +65,8 @@
                 <p class="header__subtitle">RESTAURANT</p>
                 <h1 class="header__title">hungry people</h1>
                 <div class="header__btns">
-                    <button class="header__btn btn">BOOK TABLE</button>
-                    <button class="header__btn btn">EXPLORE</button>
+                    <button class="header__btn btn btn-booking" type="button">BOOK TABLE</button>
+                    <button class="header__btn btn btn-contact" type="button">EXPLORE</button>
                 </div>
             </div>
             <div class="header__social">
@@ -87,7 +89,9 @@
         </div>
 
         <div class="header__arrow">
-            <picture><source srcset="images/down-btn.svg" type="image/webp"><img src="images/down-btn.svg" alt="down-btn"></picture>
+            <picture>
+                <source srcset="images/down-btn.svg" type="image/webp"><img src="images/down-btn.svg" alt="down-btn">
+            </picture>
         </div>
     </header>
 
@@ -97,7 +101,8 @@
                 <h3 class="about__info-title title anim-elems anim-no-hide">about us</h3>
                 <p class="about__info-subtitle anim-elems">We are a good command</p>
                 <p class="about__info-text">
-                    We are knowledgeable about and skilled in our area. We work with a standard set of menu, but together we can create the magic of taste only for you.
+                    We are knowledgeable about and skilled in our area. We work with a standard set of menu, but
+                    together we can create the magic of taste only for you.
                     The team has been tested for years
                 </p>
             </div>
@@ -167,19 +172,31 @@
                 <h3 class="booking__info-title title anim-elems anim-no-hide">book a table</h3>
                 <div class="booking__table">
                     <form class="booking__form">
-                        <input class="form__input booking__form-item1" type="text" placeholder="Name">
-                        <input class="form__input booking__form-item2" type="email" placeholder="Email">
-                        <input class="form__input booking__form-item3" type="tel" placeholder="Phone">
-                        <input class="form__input booking__form-item4" type="text" placeholder="People">
-                        <input class="form__input booking__form-item5" type="date">
-                        <input class="form__input booking__form-item6" type="time">
+                        <input class="form__input booking__form-item1" id="name-booking" type="text" placeholder="Name"
+                            required>
+                        <input class="form__input booking__form-item2" id="email-booking" type="email"
+                            placeholder="Email" required>
+                        <input class="form__input booking__form-item3" id="tel-booking" type="tel" placeholder="Phone"
+                            required>
+                        <input class="form__input booking__form-item4" id="numbers-people-booking" type="number" min="1"
+                            placeholder="People" required>
+                        <div class="form__date">
+                            <input class="form__input booking__form-item5" id="date-booking" type="date"
+                                max="2021-12-31" required>
+                        </div>
+
+                        <div class="form__time">
+                            <input class="form__input booking__form-item6" id="time-booking" type="time" step="300"
+                                min="08:00" max="22:00" required>
+                        </div>
                         <button class="form__button booking__form-item7" type="submit">BOOK NOW</button>
                     </form>
                 </div>
             </div>
             <div class="booking__slide slide slide-left"></div>
         </div>
-        <p class="booking__subtitle anim-elems anim-no-hide">Mon - Fri: <span>8AM - 10PM</span>, Sat - Sun: <span>8AM - 3PM</span>, Phone:
+        <p class="booking__subtitle anim-elems anim-no-hide">Mon - Fri: <span>8AM - 10PM</span>, Sat - Sun: <span>8AM -
+                3PM</span>, Phone:
             <span>+40 729 131 637/+40 726 458 782</span>
         </p>
     </section>
@@ -239,7 +256,8 @@
         <div class="menu__inner">
             <div class="menu__info">
                 <h3 class="menu__info-title title anim-elems  anim-no-hide">DELICIOUS MENU</h3>
-                <p class="menu__info-subtitle anim-elems">Сan make a choice in the menu. You can order another food's options from
+                <p class="menu__info-subtitle anim-elems">Сan make a choice in the menu. You can order another food's
+                    options from
                     our manager</p>
                 <ul class="menu__info-tabs">
                     <li>
@@ -807,11 +825,11 @@
                 <div class="contact__table">
                     <form class="contact__form">
                         <fieldset class="contact__form-items">
-                            <input class="form__input contact__form-item1" type="text" placeholder="Name">
-                            <input class="form__input contact__form-item2" type="email" placeholder="Email">
-                            <input class="form__input contact__form-item3" type="tel" placeholder="Phone">
+                            <input class="form__input contact__form-item1" type="text" placeholder="Name" required>
+                            <input class="form__input contact__form-item2" type="email" placeholder="Email" required>
+                            <input class="form__input contact__form-item3" type="tel" placeholder="Phone" required>
                             <textarea class="form__textarea contact__form-item4" name="message" id="message"
-                                placeholder="Message"></textarea>
+                                placeholder="Message" required></textarea>
                         </fieldset>
                         <fieldset class="contact__form-btns">
                             <div class="contact__form-item5">
@@ -840,7 +858,8 @@
                                     office@mindblister.com
                                 </a>
                             </div>
-                            <button class="form__button contact__form-item6" type="submit">SEND MESSAGE</button>
+                            <button class="form__button contact__form-item6" type="submit">SEND
+                                MESSAGE</button>
                         </fieldset>
                     </form>
                 </div>
@@ -863,6 +882,7 @@
     </footer>
 
     <script src="js/main.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
 </body>
 
 </html>
